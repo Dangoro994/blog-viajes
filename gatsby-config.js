@@ -1,7 +1,8 @@
 module.exports = {
   pathPrefix: "/blog-viajes",
   siteMetadata: {
-    title: `Mi Blog Personal`,
+    title: `Blog de viajes`,
+    author: 'Danel Lopez'
   },
   plugins: [
     `gatsby-transformer-remark`,
