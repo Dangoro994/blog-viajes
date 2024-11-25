@@ -12,9 +12,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   const result = await graphql(`
     {
       allMarkdownRemark {
@@ -27,14 +26,15 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({ path: `${pathPrefix}${node.fields.slug}`,
+    createPage({
+      path: node.fields.slug,  // No concatenes `pathPrefix`
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         slug: node.fields.slug,
       },
-    })
-  })
+    });
+  });
 }
