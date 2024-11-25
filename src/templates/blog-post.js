@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql, Link ,withPrefix} from "gatsby"
 import "../styles/global.css"
 
 export default function BlogPost({ data }) {
@@ -13,7 +13,7 @@ export default function BlogPost({ data }) {
           <ul>
             {allPosts.edges.map(({ node }) => (
               <li key={node.fields.slug}>
-                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                <Link to={withPrefix(node.fields.slug)}>{node.frontmatter.title}</Link>
               </li>
             ))}
           </ul>

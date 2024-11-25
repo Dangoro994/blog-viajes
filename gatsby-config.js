@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/blog-viajes",
   siteMetadata: {
     title: `Blog de viajes`,
-    author: 'Danel Lopez'
+    author: '@Dangoro994'
   },
   plugins: [
     `gatsby-transformer-remark`,
