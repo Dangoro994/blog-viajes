@@ -6,7 +6,7 @@ export default function HomePage({ data }) {
   return (
     <div className="homepage-layout">
       <main className="homepage-content">
-        <h1>Bienvenido a Mi Blog Personal</h1>
+        <h1>Bienvenido a mi blog de Viajes</h1>
         <p>Selecciona una entrada del menú para leer más.</p>
         <aside className="sidebar">
           <nav>
@@ -19,6 +19,7 @@ export default function HomePage({ data }) {
             </ul>
           </nav>
         </aside>
+        <p>Creado por : Danel Lopez Agoues.</p>
       </main>
     </div>
   )
