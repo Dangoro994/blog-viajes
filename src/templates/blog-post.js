@@ -13,7 +13,7 @@ export default function BlogPost({ data }) {
           <ul>
             {allPosts.edges.map(({ node }) => (
               <li key={node.fields.slug}>
-                <Link to={withPrefix(node.fields.slug)}>{node.frontmatter.title}</Link>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
               </li>
             ))}
           </ul>
